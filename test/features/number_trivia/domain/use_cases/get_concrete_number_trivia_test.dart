@@ -27,7 +27,7 @@ void main() {
         .thenAnswer((realInvocation) async => Right(testNumberTrivia));
 
     //Act
-    final result = await usecase.execute(number: testNumber); //Yukarıda setupda oluşturduğumuz use case'i kullandık
+    final result = await usecase(number: testNumber); //Yukarıda setupda oluşturduğumuz use case'i kullandık
 
     //Assert
     expect(result, Right(testNumberTrivia)); //gelen sonucu kontrol ettik
