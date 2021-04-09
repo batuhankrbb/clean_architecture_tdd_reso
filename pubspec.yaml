@@ -35,6 +35,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  data_connection_checker: ^0.3.4
   mockito: ^5.0.3
 
 # For information on the generic Dart part of this file, see the
