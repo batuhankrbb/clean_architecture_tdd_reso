@@ -2,6 +2,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
+
 import '../error/failures.dart';
 
 //* Bu bizim UseCase base sınıfımız. Kısacası artık bundan sonra Use Caseleri bundan türeticez.

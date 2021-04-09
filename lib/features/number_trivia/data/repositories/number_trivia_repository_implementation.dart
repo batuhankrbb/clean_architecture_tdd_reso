@@ -1,12 +1,13 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter_clean_architecture_reso/core/error/exceptions.dart';
-import 'package:flutter_clean_architecture_reso/core/platform/network_info.dart';
-import 'package:flutter_clean_architecture_reso/features/number_trivia/data/data_sources/number_trivia_local_data_source.dart';
-import 'package:flutter_clean_architecture_reso/features/number_trivia/data/data_sources/number_trivia_remote_data_source.dart';
-import 'package:flutter_clean_architecture_reso/features/number_trivia/domain/entities/number_trivia.dart';
-import 'package:flutter_clean_architecture_reso/core/error/failures.dart';
 import 'package:dartz/dartz.dart';
-import 'package:flutter_clean_architecture_reso/features/number_trivia/domain/repositories/number_trivia_repository.dart';
+import 'package:flutter/foundation.dart';
+
+import '../../../../core/error/exceptions.dart';
+import '../../../../core/error/failures.dart';
+import '../../../../core/platform/network_info.dart';
+import '../../domain/entities/number_trivia.dart';
+import '../../domain/repositories/number_trivia_repository.dart';
+import '../data_sources/number_trivia_local_data_source.dart';
+import '../data_sources/number_trivia_remote_data_source.dart';
 
 typedef Future<NumberTrivia> _GetAnyTrivia(); //Concrete Or Random Chooser  //* biz burada alacağımız fonksiyon NumberTrivia dönsün dedik ama NumberTriviaModel dönen fonksiyonlar atadık yukarıda. Bunun çalışma sebebi polimorfizm. NumberTriviaModel zaten NumberTrivia'dan türediği için hiçbir sorun çıkmadan çalışıyor.
 
