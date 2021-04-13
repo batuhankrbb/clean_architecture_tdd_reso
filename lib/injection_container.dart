@@ -1,18 +1,18 @@
-import 'dart:developer';
 
-import 'package:flutter_clean_architecture_reso/core/network/network_info.dart';
-import 'package:flutter_clean_architecture_reso/core/util/input_converter.dart';
-import 'package:flutter_clean_architecture_reso/features/number_trivia/data/data_sources/number_trivia_local_data_source.dart';
-import 'package:flutter_clean_architecture_reso/features/number_trivia/data/data_sources/number_trivia_remote_data_source.dart';
-import 'package:flutter_clean_architecture_reso/features/number_trivia/data/repositories/number_trivia_repository_implementation.dart';
-import 'package:flutter_clean_architecture_reso/features/number_trivia/domain/usecases/get_concrete_number_trivia.dart';
-import 'package:flutter_clean_architecture_reso/features/number_trivia/domain/usecases/get_random_number_trivia.dart';
-import 'package:get_it/get_it.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:http/http.dart' as http;
-import 'features/number_trivia/domain/repositories/number_trivia_repository.dart';
-import 'features/number_trivia/presentation/bloc/number_trivia_bloc.dart';
 import 'package:data_connection_checker/data_connection_checker.dart';
+import 'package:get_it/get_it.dart';
+import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
+
+import 'core/network/network_info.dart';
+import 'core/util/input_converter.dart';
+import 'features/number_trivia/data/data_sources/number_trivia_local_data_source.dart';
+import 'features/number_trivia/data/data_sources/number_trivia_remote_data_source.dart';
+import 'features/number_trivia/data/repositories/number_trivia_repository_implementation.dart';
+import 'features/number_trivia/domain/repositories/number_trivia_repository.dart';
+import 'features/number_trivia/domain/usecases/get_concrete_number_trivia.dart';
+import 'features/number_trivia/domain/usecases/get_random_number_trivia.dart';
+import 'features/number_trivia/presentation/bloc/number_trivia_bloc.dart';
 
 ///* repository, datasource, usecase gibi şeyler app boyunca sadece 1 tane olacağı için zaten burada getit ile dependency injection yapıyoruz.
 ///*  Hani ben normalde swiftde her şeyi singleton yapıyordum ya repositoryi, servisleri vb. Burada da singleton yapmak yerine normal yapıp getit ile dependency injection yapıyoruz.
