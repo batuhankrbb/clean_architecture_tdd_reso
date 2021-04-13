@@ -4,12 +4,13 @@ import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_clean_architecture_reso/core/error/failures.dart';
-import 'package:flutter_clean_architecture_reso/core/usecases/usecases.dart';
-import 'package:flutter_clean_architecture_reso/core/util/input_converter.dart';
-import 'package:flutter_clean_architecture_reso/features/number_trivia/domain/entities/number_trivia.dart';
-import 'package:flutter_clean_architecture_reso/features/number_trivia/domain/usecases/get_concrete_number_trivia.dart';
-import 'package:flutter_clean_architecture_reso/features/number_trivia/domain/usecases/get_random_number_trivia.dart';
+
+import '../../../../core/error/failures.dart';
+import '../../../../core/usecases/usecases.dart';
+import '../../../../core/util/input_converter.dart';
+import '../../domain/entities/number_trivia.dart';
+import '../../domain/usecases/get_concrete_number_trivia.dart';
+import '../../domain/usecases/get_random_number_trivia.dart';
 
 part 'number_trivia_event.dart';
 part 'number_trivia_state.dart';
