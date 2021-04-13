@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_clean_architecture_reso/features/number_trivia/domain/entities/number_trivia.dart';
-import 'package:flutter_clean_architecture_reso/features/number_trivia/domain/usecases/get_random_number_trivia.dart';
-import 'package:flutter_clean_architecture_reso/features/number_trivia/presentation/bloc/number_trivia_bloc.dart';
-import 'package:flutter_clean_architecture_reso/injection_container.dart';
+
+import '../../domain/entities/number_trivia.dart';
+import '../bloc/number_trivia_bloc.dart';
 
 class NumberTriviaPage extends StatefulWidget {
   @override

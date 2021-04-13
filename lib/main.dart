@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_clean_architecture_reso/features/number_trivia/presentation/pages/number_trivia_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
 import 'features/number_trivia/presentation/bloc/number_trivia_bloc.dart';
+import 'features/number_trivia/presentation/pages/number_trivia_page.dart';
 import 'injection_container.dart';
 
 void main() {
