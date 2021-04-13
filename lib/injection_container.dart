@@ -1,4 +1,3 @@
-
 import 'package:data_connection_checker/data_connection_checker.dart';
 import 'package:get_it/get_it.dart';
 import 'package:http/http.dart' as http;
@@ -23,7 +22,7 @@ import 'features/number_trivia/presentation/bloc/number_trivia_bloc.dart';
 ///* CleanUp olması gereken yani dispose kullanan classlar (Bloc gibi) singleton olarak register edilmemeli.
 GetIt getIt = GetIt.instance;
 
-Future<void> init() async{
+void init(SharedPreferences preferences){
   //! Features - Number Trivia
   //bloc
   getIt.registerFactory(
@@ -73,8 +72,9 @@ Future<void> init() async{
       () => NetworkInfoImplementation(getIt()));
   //! External
 
-  getIt.registerLazySingletonAsync<SharedPreferences>( () async => await SharedPreferences.getInstance());
-  getIt.registerLazySingleton( () => http.Client());
-  getIt.registerLazySingleton( () => DataConnectionChecker());
-  
+  getIt.registerLazySingleton(
+      () => preferences);
+
+  getIt.registerLazySingleton(() => http.Client());
+  getIt.registerLazySingleton(() => DataConnectionChecker());
 }
